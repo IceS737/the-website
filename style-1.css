@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap');
+
+:root {
+  --theme-blue: #5945d8;
+  --shadow: 0 0 5px #272822;
+  --company-name: 'CompanyName';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.pg-1 {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'head head head'
+    'body body body'
+    'about about about'
+    'how   how   how'
+    'foot foot foot';
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/* //////////////////////////////\\Layout\\/////////////////////////////// */
+@media only screen and (min-width: 760px) {
+  .pg-1 {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'head head head'
+      'body body side'
+      'about about about'
+      'how   how   how'
+      'foot foot foot';
+    font-family: 'Zen Kurenaido', sans-serif;
+  }
+  .side-links {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 10% 30% 0;
+  }
+}
+
+.head {
+  grid-area: head;
+}
+.body {
+  grid-area: body;
+}
+
+.side-links {
+  grid-area: side;
+}
+
+.about {
+  grid-area: about;
+}
+
+.how {
+  grid-area: how;
+}
+
+.foot {
+  grid-area: foot;
+}
