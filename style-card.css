@@ -1,0 +1,78 @@
+.card-container {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-container .box {
+  position: relative;
+  width: 350px;
+  height: 280px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.576);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-container .box:hover {
+  cursor: pointer;
+}
+
+.card-container .box .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--i);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.5s;
+  z-index: 2;
+}
+
+.card-container .box:hover .icon {
+  top: 30px;
+  left: calc(50% - 35px);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card-container .icon ion-icon {
+  font-size: 5em;
+  color: #fff;
+  transition-duration: 0.5s;
+}
+
+.card-container .box:hover .icon ion-icon {
+  font-size: 3em;
+}
+
+.card-container .box .content {
+  position: relative;
+  padding: 20px;
+  color: #2f302b;
+  text-align: center;
+  margin-top: 100px;
+  z-index: 1;
+  transform: scale(0);
+  transition-duration: 0.5s;
+}
+
+.card-container .box:hover .content {
+  transform: scale(1);
+}
+
+.card-container .box .content h2 {
+  margin-bottom: 5px;
+}
+.card-container .box .content p {
+  font-weight: 400;
+}
